@@ -1,0 +1,29 @@
+.search-bar {
+    margin-bottom: 3em;
+    display: flex;
+    width: 100%;
+    max-width: 449px;
+    gap: .3em;
+    border: solid 2px #FFAE6D;
+    border-radius: 10px;
+    align-items: center;
+    padding: .2em .4em;
+    background: #FFD384;
+
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+
+        svg {
+            color: #FFFBE9;
+        }
+    }
+
+    &__search-stroke {
+        width: 100%;
+        border: none;
+        background: #FFD384;
+        color: #FFFBE9;
+    }
+}
