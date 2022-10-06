@@ -4,26 +4,25 @@
     width: 100%;
     max-width: 449px;
     gap: .3em;
-    border: solid 2px #FFAE6D;
+    border: solid 2px black;
     border-radius: 10px;
     align-items: center;
     padding: .2em .4em;
-    background: #FFD384;
 
 
     &__icon {
         width: 25px;
         height: 25px;
 
-        svg {
-            color: #FFFBE9;
-        }
+        // svg {
+        //     color: #FFFBE9;
+        // }
     }
 
     &__search-stroke {
         width: 100%;
         border: none;
-        background: #FFD384;
-        color: #FFFBE9;
+        // background: #FFD384;
+        // color: #FFFBE9;
     }
 }
