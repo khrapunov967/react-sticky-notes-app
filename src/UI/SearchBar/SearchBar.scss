@@ -1,8 +1,7 @@
 .search-bar {
-    margin-bottom: 3em;
     display: flex;
     width: 100%;
-    max-width: 449px;
+    max-width: 380px;
     gap: .3em;
     border: solid 2px black;
     border-radius: 10px;
@@ -13,16 +12,11 @@
     &__icon {
         width: 25px;
         height: 25px;
-
-        // svg {
-        //     color: #FFFBE9;
-        // }
     }
 
     &__search-stroke {
         width: 100%;
         border: none;
-        // background: #FFD384;
-        // color: #FFFBE9;
+        font-size: .9em;
     }
 }

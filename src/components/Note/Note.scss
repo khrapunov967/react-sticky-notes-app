@@ -1,12 +1,27 @@
 .note {
     width: 250px;
-    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: #fff;
-    padding: 1em;
+    padding: 0.5em;
     border: solid 2px black;
     border-radius: 10px;
 
-    // &__text {
-    //     color: green;
-    // }
+    &__text {
+        font-size: .9em;
+        margin-bottom: .5em;
+    }
+
+    &__footer {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        &__remove-icon {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+    }
 }
