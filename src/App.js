@@ -17,7 +17,7 @@ function App() {
   const [searchValue, setSearchValue] = useState("");
 
   const filteredNotes = useMemo(() => {
-    return notes.filter(note => note.noteText.includes(searchValue))
+    return notes.filter(note => note.noteText.toLowerCase().includes(searchValue.toLowerCase()))
   }, [searchValue, notes]);
 
   return (

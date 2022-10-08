@@ -12,7 +12,7 @@ const NotesSection = ({notes, setNotes}) => {
         <section className="notes-section">
             {notes.length ? 
                 notes.map((note) => <Note noteText={note.noteText} removeNote={() => removeNote(note)} key={note.id}/>)
-                : <p>No Notes</p>
+                : <p className="notes-section__no-notes-msg">No Notes</p>
             }
         </section>
     );

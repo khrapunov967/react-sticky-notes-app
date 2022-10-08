@@ -1,8 +1,22 @@
 .button {
-    border: solid 2px black;
+    border: solid 2px #809A6F;
     border-radius: 10px;
     font-size: .9em;
-    background: #fff;
-    padding: .2em .5em;
+    padding: .2em .3em;
     cursor: pointer;
+    color: #FEFEFE;
+    background: #9FC088;
+    transition: all 0.15s ease-in-out;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+        background: rgb(148, 190, 120);
+    }
+
+    svg {
+        width: 29px;
+        height: 29px;
+        color: #FEFEFE;
+    }
 }
