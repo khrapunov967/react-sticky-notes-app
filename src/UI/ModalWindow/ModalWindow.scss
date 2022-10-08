@@ -1,3 +1,19 @@
+@keyframes modal-active-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes modal-unactive-animation {
+    100% {
+        opacity: 0;
+    }
+}
+
 .bg {
     position: absolute;
     top: 0;
@@ -8,8 +24,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: modal-active-animation 0.3s forwards;
 
     &.hidden {
+        animation: modal-unactive-animation 0.3s forwards;
         display: none;
     }
 }

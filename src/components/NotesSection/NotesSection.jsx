@@ -3,9 +3,10 @@ import Note from "../Note/Note";
 import "./NotesSection.scss";
 
 const NotesSection = ({notes, setNotes}) => {
-
+    
     const removeNote = (note) => {
-        setNotes(notes.filter(currNote => currNote.id !== note.id))
+        localStorage.setItem("notes", JSON.stringify(notes.filter(currNote => currNote.id !== note.id)))
+        setNotes(JSON.parse(localStorage.getItem("notes")));
     }
     
     return (

@@ -7,7 +7,8 @@ const ModalWindow = ({isModalVisible, setIsModalVisible, notes, setNotes}) => {
     const [noteText, setNoteText] = useState("");
 
     const createNote = () => {
-        setNotes([...notes, {id: Date.now(), noteText: noteText}]);
+        localStorage.setItem("notes", JSON.stringify([...notes, {id: Date.now(), noteText: noteText}]));
+        setNotes(JSON.parse(localStorage.getItem("notes")));
         setNoteText("")
         setIsModalVisible(false);
     }

@@ -2,8 +2,9 @@ import React from "react";
 import "./Note.scss";
 
 const Note = ({noteText, removeNote}) => {
+
     return (
-        <div className="note">
+        <div className={"note"}>
             <p className="note__text">{noteText}</p>
 
             <footer className="note__footer">

@@ -1,3 +1,13 @@
+@keyframes remove-note-animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 .note {
     width: 250px;
     display: flex;
@@ -7,6 +17,10 @@
     padding: 0.5em;
     border: solid 2px #DAB88B;
     border-radius: 10px;
+
+    &.remove {
+        animation: remove-note-animation 0.5s forwards;
+    }
 
     &__text {
         font-size: .9em;

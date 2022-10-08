@@ -6,12 +6,16 @@ import HeaderSection from "./components/HeaderSection/HeaderSection";
 
 function App() {
 
-  const [notes, setNotes] = useState([
-    {id: 1, noteText: 'It has survived not only five centuries, but also the leapg, , but also the leapg, but also the leapg, but also the leapg'},
-    {id: 2, noteText: 'It has survived not only five centuries, but also the leapg, , but also the leapg, but also the leapg, but also the leapg'},
-    {id: 3, noteText: 'It has survived not only five centuries, but also the leapg, , but also the leapg, but also the leapg, but also the leapg'},
-    {id: 4, noteText: 'It has survived not only five centuries, but also the leapg, , but also the leapg, but also the leapg, but also the leapg'}
-  ]);
+  const setLocalStorage = () => {
+    localStorage.setItem("notes", JSON.stringify([
+      {id: 1, noteText: 'It has survived not only five centuries, but also the leapg, , but also the leapg, but also the leapg, but also the leapg'},
+      {id: 2, noteText: 'It has survived not only five centuries, but also the leapg, , but also the leapg, but also the leapg, but also the leapg'},
+      {id: 3, noteText: 'It has survived not only five centuries, but also the leapg, , but also the leapg, but also the leapg, but also the leapg'},
+      {id: 4, noteText: 'It has survived not only five centuries, but also the leapg, , but also the leapg, but also the leapg, but also the leapg'},
+    ]));
+  };
+
+  const [notes, setNotes] = useState(localStorage.getItem("notes") ? JSON.parse(localStorage.getItem("notes")) : setLocalStorage)
 
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [searchValue, setSearchValue] = useState("");
