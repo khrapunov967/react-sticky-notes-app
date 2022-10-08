@@ -13,6 +13,8 @@ function App() {
       {id: 3, noteText: 'It has survived not only five centuries, but also the leapg, , but also the leapg, but also the leapg, but also the leapg'},
       {id: 4, noteText: 'It has survived not only five centuries, but also the leapg, , but also the leapg, but also the leapg, but also the leapg'},
     ]));
+
+    return JSON.parse(localStorage.getItem("notes"));
   };
 
   const [notes, setNotes] = useState(localStorage.getItem("notes") ? JSON.parse(localStorage.getItem("notes")) : setLocalStorage)
