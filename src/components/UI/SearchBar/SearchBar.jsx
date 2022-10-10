@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchBar.scss";
 
-const SearchBar = ({placeholder, searchValue, setSearchValue}) => {
+const SearchBar = ({placeholder, searchQuery, setSearchQuery}) => {
 
     return (
         <div className="search-bar">
@@ -11,14 +11,14 @@ const SearchBar = ({placeholder, searchValue, setSearchValue}) => {
 
             <input 
                 placeholder={placeholder} 
-                value={searchValue}
-                onChange={(e) => setSearchValue(e.target.value)}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
                 type="text" 
                 name="search-stroke" 
                 className="search-bar__search-stroke" 
             />
 
-            <div className={`search-bar__clear-icon ${searchValue ? "" : "hidden"}`} onClick={() => setSearchValue("")}>
+            <div className={`search-bar__clear-icon ${searchQuery ? "" : "hidden"}`} onClick={() => setSearchQuery("")}>
                 <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
             </div>
         </div>

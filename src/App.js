@@ -1,12 +1,12 @@
 import React, { useState, useMemo } from "react";
 import NotesSection from "./components/NotesSection/NotesSection";
-import ModalWindow from "./UI/ModalWindow/ModalWindow";
+import ModalWindow from "./components/UI/ModalWindow/ModalWindow";
 import HeaderSection from "./components/HeaderSection/HeaderSection";
 
 
 function App() {
 
-  const setLocalStorage = () => {
+  const setAndGetLocalStorage = () => {
     localStorage.setItem("notes", JSON.stringify([
       {id: 1, noteText: 'It has survived not only five centuries, but also the leapg, , but also the leapg, but also the leapg, but also the leapg'},
       {id: 2, noteText: 'It has survived not only five centuries, but also the leapg, , but also the leapg, but also the leapg, but also the leapg'},
@@ -17,14 +17,14 @@ function App() {
     return JSON.parse(localStorage.getItem("notes"));
   };
 
-  const [notes, setNotes] = useState(localStorage.getItem("notes") ? JSON.parse(localStorage.getItem("notes")) : setLocalStorage)
+  const [notes, setNotes] = useState(localStorage.getItem("notes") ? JSON.parse(localStorage.getItem("notes")) : setAndGetLocalStorage)
 
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const filteredNotes = useMemo(() => {
-    return notes.filter(note => note.noteText.toLowerCase().includes(searchValue.toLowerCase()))
-  }, [searchValue, notes]);
+    return notes.filter(note => note.noteText.toLowerCase().includes(searchQuery.toLowerCase()))
+  }, [searchQuery, notes]);
 
   return (
     <div className='wrapper'>
@@ -32,8 +32,8 @@ function App() {
         setIsModalVisible={setIsModalVisible}
         notes={notes}
         setNotes={setNotes}
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
       />
 
       <NotesSection 
