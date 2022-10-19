@@ -1,0 +1,9 @@
+.letters-counter {
+    font-size: .7em;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.letters-counter.overflow {
+    color: rgb(207, 29, 29);
+}

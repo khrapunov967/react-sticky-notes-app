@@ -1,16 +1,16 @@
 import React, { useState } from "react";
+import LettersCounter from "../../LettersCounter/LettersCounter";
 import Button from "../Button/Button";
-
 import "./ModalWindow.scss";
 
 const ModalWindow = ({isModalVisible, setIsModalVisible, notes, setNotes}) => {
 
     const [noteText, setNoteText] = useState("");
+    const MAX_LETTERS_NUMBER = 100;
 
-    const createNote = () => {
-        if (noteText.trim()) {
-            localStorage.setItem("notes", JSON.stringify([...notes, {id: Date.now(), noteText: noteText}]));
-            setNotes(JSON.parse(localStorage.getItem("notes")));
+    const createNewNote = () => {
+        if (noteText.trim() && noteText.length <= MAX_LETTERS_NUMBER) {
+            setNotes([...notes, {id: Date.now(), noteText: noteText}]);
             setNoteText("")
             setIsModalVisible(false);
         }
@@ -40,7 +40,19 @@ const ModalWindow = ({isModalVisible, setIsModalVisible, notes, setNotes}) => {
                 />
 
                 <footer className="modal__footer">
-                    <Button buttonName={"Create"} onClick={createNote}/>
+                    <div className="modal__footer__letters-counter">
+                        <LettersCounter 
+                            currentNumber={noteText.length} 
+                            maxNumber={MAX_LETTERS_NUMBER}
+                        />
+                    </div>
+
+                    <div className="modal__footer__create-note-btn">
+                        <Button 
+                            buttonName={"Create"} 
+                            onClick={createNewNote}
+                        />
+                    </div>
                 </footer>
                 
             </div>

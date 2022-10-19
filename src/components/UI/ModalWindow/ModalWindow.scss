@@ -67,7 +67,16 @@
 
     &__footer {
         width: 100%;
-        display: flex;
-        justify-content: center;
+
+        &__letters-counter {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 4px;
+        }
+
+        &__create-note-btn {
+            display: flex;
+            justify-content: center;
+        }
     }
 }
