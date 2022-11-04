@@ -1,0 +1,28 @@
+.note-item {
+    width: 100%;
+    max-width: 250px;
+    background: #f4d799;
+    border: 4px solid #33322e;
+    box-shadow: 12px 12px 0px #33322e;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 3px solid #33322e;
+        padding: 9px;
+
+        &__title {
+            font-weight: 700;
+            font-size: 25px;
+        }
+    }
+
+    &__content {
+        padding: 9px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
