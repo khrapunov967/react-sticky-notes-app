@@ -10,6 +10,7 @@ const NotesContainer = () => {
     return (
         <section className="notes-container">
             {
+                !filteredNotes.length ? <p className="notes-container__no-notes-msg">No Notes</p> : 
                 filteredNotes.map(note => <NoteItem note={note} key={note.id}/>)
             }
         </section>

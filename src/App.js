@@ -15,6 +15,7 @@ function App() {
       {id: 3, noteTitle: "January", noteContent: "asdfsadfsadfsadf sadfsdfsadfsadf sadfsadfsadf asdfsadfsadfsadf sadfsdfsadfsadf sadfsadfsadf asdfsadfsadfsadf sadfsdfsadfsadf sadfsadfsadf "},
     ],
     isModalVisible: false,
+    noteTitle: "",
     noteContent: "",
     searchQuery: "",
     isClearSearchQueryIconVisible: false

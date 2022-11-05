@@ -23,13 +23,22 @@ const Modal = () => {
                 </header>
 
                 <main className="modal__content">
+                    <input 
+                        value={state.noteTitle}
+                        onChange={(e) => dispatch({type: "changeNoteTitleHandler", payload: e.target.value})}
+                        type="text" 
+                        name="title"  
+                        className="modal__content__title"
+                        placeholder="note title..."
+                    />
+
                     <textarea 
                         value={state.noteContent}
                         onChange={(e) => dispatch({type: "changeNoteContentHandler", payload: e.target.value})}
                         cols="24" 
                         rows="10" 
                         className="modal__content__text" 
-                        placeholder="type here..."
+                        placeholder="note text..."
                     />                  
                 </main>
 

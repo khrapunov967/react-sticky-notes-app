@@ -1,5 +1,6 @@
 .modal {
-    width: 300px;
+    width: 100%;
+    max-width: 350px;
     z-index: 30;
     background: #f9f3e5;
     border: 4px solid #33322e;
@@ -27,6 +28,14 @@
     &__content {
         width: 100%;
         margin-bottom: 9px;
+
+        &__title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            border: none;
+            background: inherit;
+        }
 
         &__text {
             width: 100%;

@@ -11,7 +11,14 @@ export default (state, action) => {
             return {
                 ...state,
                 isModalVisible: false,
-                noteContent: ""
+                noteContent: "",
+                noteTitle: ""
+            };
+
+        case "changeNoteTitleHandler":
+            return {
+                ...state,
+                noteTitle: action.payload
             };
 
         case "changeNoteContentHandler":
@@ -33,10 +40,10 @@ export default (state, action) => {
             };
 
         case "createNote":
-            if (state.noteContent.trim()) {
+            if (state.noteContent.trim() && state.noteTitle.trim()) {
                 const newNote = {
                     id: Date.now(),
-                    noteTitle: "Title",
+                    noteTitle: state.noteTitle,
                     noteContent: state.noteContent
                 };
 
@@ -44,9 +51,16 @@ export default (state, action) => {
                     ...state,
                     notes: [...state.notes, newNote],
                     isModalVisible: false,
-                    noteContent: ""
+                    noteContent: "",
+                    noteTitle: ""
                 }
             }
+
+        case "removeNote":
+            return {
+                ...state,
+                notes: state.notes.filter(note => note.id !== action.payload)
+            };
 
         default: 
             return state;
