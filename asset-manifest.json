@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/react-sticky-notes-app/static/css/main.65bc9804.css",
-    "main.js": "/react-sticky-notes-app/static/js/main.d89e810e.js",
+    "main.css": "/react-sticky-notes-app/static/css/main.5562bb7a.css",
+    "main.js": "/react-sticky-notes-app/static/js/main.7e140b1c.js",
     "index.html": "/react-sticky-notes-app/index.html",
-    "main.65bc9804.css.map": "/react-sticky-notes-app/static/css/main.65bc9804.css.map",
-    "main.d89e810e.js.map": "/react-sticky-notes-app/static/js/main.d89e810e.js.map"
+    "static/media/trash-icon.svg": "/react-sticky-notes-app/static/media/trash-icon.3c2f95666749bb002b9eae66335ab88e.svg",
+    "static/media/search-icon.svg": "/react-sticky-notes-app/static/media/search-icon.c5ac840dad6afecefd555671dea16202.svg",
+    "static/media/close-icon.svg": "/react-sticky-notes-app/static/media/close-icon.17a848da464539443c31f28e449b8dea.svg",
+    "main.5562bb7a.css.map": "/react-sticky-notes-app/static/css/main.5562bb7a.css.map",
+    "main.7e140b1c.js.map": "/react-sticky-notes-app/static/js/main.7e140b1c.js.map"
   },
   "entrypoints": [
-    "static/css/main.65bc9804.css",
-    "static/js/main.d89e810e.js"
+    "static/css/main.5562bb7a.css",
+    "static/js/main.7e140b1c.js"
   ]
 }
