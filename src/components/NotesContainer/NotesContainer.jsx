@@ -5,12 +5,12 @@ import "./NotesContainer.scss";
 
 const NotesContainer = () => {
 
-    const {state} = useContext(Context);
+    const {filteredNotes} = useContext(Context);
 
     return (
         <section className="notes-container">
             {
-                state.notes.map(note => <NoteItem note={note} key={note.id}/>)
+                filteredNotes.map(note => <NoteItem note={note} key={note.id}/>)
             }
         </section>
     );

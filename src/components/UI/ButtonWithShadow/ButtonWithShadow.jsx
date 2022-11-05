@@ -1,9 +1,9 @@
 import React from "react";
 import "./ButtonWithShadow.scss";
 
-const ButtonWithShadow = ({title}) => {
+const ButtonWithShadow = ({title, ...props}) => {
     return (
-        <button className="btn-with-shadow">
+        <button className="btn-with-shadow" {...props}>
             {title}
         </button>
     );
