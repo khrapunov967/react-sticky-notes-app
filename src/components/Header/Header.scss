@@ -1,8 +1,9 @@
 .header {
     width: 100%;
     display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
 
     &__title {
         width: 100%;
@@ -11,6 +12,7 @@
         font-weight: 500;
         align-items: center;
         white-space: nowrap;
+        margin-bottom: 30px;
 
         &::before {
             content: "";
@@ -28,4 +30,11 @@
             margin-left: 15px;
         }
     }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
