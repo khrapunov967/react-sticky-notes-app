@@ -3,6 +3,7 @@ import { Context } from "./context";
 import reducer from "./reducer";
 import Header from "./components/Header/Header";
 import NotesContainer from "./components/NotesContainer/NotesContainer";
+import Modal from "./components/UI/Modal/Modal";
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
         <Header />
         <NotesContainer />
       </div>
+
+      {/* <Modal /> */}
     </Context.Provider>
   );
 }
