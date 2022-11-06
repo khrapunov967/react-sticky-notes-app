@@ -12,19 +12,23 @@ export default (state, action) => {
                 ...state,
                 isModalVisible: false,
                 noteContent: "",
-                noteTitle: ""
+                noteTitle: "",
+                noteTitleLettersNumber: 0,
+                noteContentLettersNumber: 0
             };
 
         case "changeNoteTitleHandler":
             return {
                 ...state,
-                noteTitle: action.payload
+                noteTitle: action.payload,
+                noteTitleLettersNumber: action.payload.length
             };
 
         case "changeNoteContentHandler":
             return {
                 ...state,
-                noteContent: action.payload
+                noteContent: action.payload,
+                noteContentLettersNumber: action.payload.length
             };
 
         case "changeSearchQueryHandler":
@@ -40,7 +44,7 @@ export default (state, action) => {
             };
 
         case "createNote":
-            if (state.noteContent.trim() && state.noteTitle.trim()) {
+            if (state.noteContent.trim() && state.noteTitle.trim() && (state.noteContentLettersNumber <= state.maxNoteContentLettersNumber && state.noteTitleLettersNumber <= state.maxNoteTitleLettersNumber)) {
                 const newNote = {
                     id: Date.now(),
                     noteTitle: state.noteTitle,
@@ -52,7 +56,9 @@ export default (state, action) => {
                     notes: [...state.notes, newNote],
                     isModalVisible: false,
                     noteContent: "",
-                    noteTitle: ""
+                    noteTitle: "",
+                    noteContentLettersNumber: 0,
+                    noteTitleLettersNumber: 0
                 }
             }
 

@@ -10,7 +10,11 @@ const SearchBar = ({onChange}) => {
 
     return (
         <div className="search-bar">
-            <img src={SearchIcon} alt="Search Icon" className="search-bar__search-icon"/>
+            <img 
+                src={SearchIcon} 
+                alt="Search Icon" 
+                className="search-bar__search-icon"
+            />
 
             <input 
                 value={state.searchQuery}
@@ -26,7 +30,8 @@ const SearchBar = ({onChange}) => {
                 src={CloseIcon} 
                 alt="Clear Icon" 
                 onClick={() => dispatch({type: "clearSearchQuery"})}
-                className={state.isClearSearchQueryIconVisible ? "search-bar__clear-icon" : "search-bar__clear-icon hidden"}  />
+                className={state.isClearSearchQueryIconVisible ? "search-bar__clear-icon" : "search-bar__clear-icon hidden"}  
+            />
         </div>
     );
 };

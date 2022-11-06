@@ -6,7 +6,7 @@ import "./Header.scss";
 
 const Header = () => {
 
-    const {state, dispatch} = useContext(Context);
+    const {dispatch} = useContext(Context);
 
     return (
         <header className="header">
@@ -15,7 +15,8 @@ const Header = () => {
             <div className="container">
                 <SearchBar 
                     onChange={(e) => dispatch({type: "changeSearchQueryHandler", payload: e.target.value})}
-                    />
+                />
+
                 <ButtonWithShadow 
                     title={"New note"}
                     onClick={() => dispatch({type: "showModal"})}

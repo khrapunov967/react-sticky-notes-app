@@ -1,11 +1,22 @@
+@keyframes show-modal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .modal {
     width: 100%;
-    max-width: 350px;
+    max-width: 370px;
     z-index: 30;
     background: #f9f3e5;
     border: 4px solid #33322e;
     box-shadow: 7px 7px 0px #33322e;
     padding: 5px;
+    animation: show-modal 0.4s linear forwards;
 
     &__header {
         width: 100%;
@@ -69,4 +80,10 @@
             display: none;
         }
     }
+}
+
+.letter-counter-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
 }

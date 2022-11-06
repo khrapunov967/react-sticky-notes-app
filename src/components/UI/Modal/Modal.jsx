@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../../../context";
 import CloseIcon from "../../../assets/icons/close-icon.svg";
 import ButtonWithShadow from "../ButtonWithShadow/ButtonWithShadow";
+import LetterCounter from "../../LetterCounter/LetterCounter";
 import "./Modal.scss";
 
 const Modal = () => {
@@ -32,6 +33,13 @@ const Modal = () => {
                         placeholder="note title..."
                     />
 
+                    <div className="letter-counter-container">
+                        <LetterCounter 
+                            curr={state.noteTitleLettersNumber} 
+                            max={state.maxNoteTitleLettersNumber}
+                        />
+                    </div>
+
                     <textarea 
                         value={state.noteContent}
                         onChange={(e) => dispatch({type: "changeNoteContentHandler", payload: e.target.value})}
@@ -39,7 +47,14 @@ const Modal = () => {
                         rows="10" 
                         className="modal__content__text" 
                         placeholder="note text..."
-                    />                  
+                    />   
+
+                    <div className="letter-counter-container">
+                        <LetterCounter 
+                            curr={state.noteContentLettersNumber} 
+                            max={state.maxNoteContentLettersNumber}
+                        />
+                    </div>               
                 </main>
 
                 <footer className="modal__footer">
