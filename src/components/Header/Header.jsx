@@ -1,12 +1,13 @@
-import React, { useContext } from "react";
-import { Context } from "../../context";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { showModal } from "../../store/modalSlice";
 import ButtonWithShadow from "../UI/ButtonWithShadow/ButtonWithShadow";
 import SearchBar from "../UI/SearchBar/SearchBar";
 import "./Header.scss";
 
 const Header = () => {
 
-    const {dispatch} = useContext(Context);
+    const dispatch = useDispatch();
 
     return (
         <header className="header">
@@ -14,12 +15,12 @@ const Header = () => {
 
             <div className="container">
                 <SearchBar 
-                    onChange={(e) => dispatch({type: "changeSearchQueryHandler", payload: e.target.value})}
+                    onChange={(e) => {}}
                 />
 
                 <ButtonWithShadow 
                     title={"New note"}
-                    onClick={() => dispatch({type: "showModal"})}
+                    onClick={() => dispatch(showModal())}
                 />
             </div>
         </header>
